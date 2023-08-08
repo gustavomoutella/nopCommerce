@@ -44,7 +44,10 @@
 
     <!-- We copy the \Logs directory -->
     <Content Include="Logs\**" CopyToPublishDirectory="PreserveNewest" />
+    <None Remove="App_Data\appsettings.json.old" />
     <None Remove="Plugins\Uploaded\placeholder.txt" />
+    <Content Include="App_Data\appsettings.json" />
+    <Content Include="App_Data\plugins.json" />
     <Content Include="Plugins\Uploaded\placeholder.txt">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
