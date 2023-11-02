@@ -51,6 +51,7 @@ using Nop.Services.Tax;
 using Nop.Services.Themes;
 using Nop.Services.Topics;
 using Nop.Services.Vendors;
+using Nop.Web.Framework.Factories;
 using Nop.Web.Framework.Menu;
 using Nop.Web.Framework.Mvc.Routing;
 using Nop.Web.Framework.Themes;
@@ -198,6 +199,7 @@ namespace Nop.Web.Framework.Infrastructure
             services.AddScoped<IShippingService, ShippingService>();
             services.AddScoped<IDateRangeService, DateRangeService>();
             services.AddScoped<ITaxCategoryService, TaxCategoryService>();
+            services.AddScoped<ICheckVatService, CheckVatService>();
             services.AddScoped<ITaxService, TaxService>();
             services.AddScoped<ILogger, DefaultLogger>();
             services.AddScoped<ICustomerActivityService, CustomerActivityService>();
@@ -225,6 +227,7 @@ namespace Nop.Web.Framework.Infrastructure
             services.AddScoped<IHtmlFormatter, HtmlFormatter>();
             services.AddScoped<IVideoService, VideoService>();
             services.AddScoped<INopUrlHelper, NopUrlHelper>();
+            services.AddScoped<IWidgetModelFactory, WidgetModelFactory>();
 
             //attribute services
             services.AddScoped(typeof(IAttributeService<,>), typeof(AttributeService<,>));

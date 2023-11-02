@@ -21,7 +21,7 @@ namespace Nop.Services.Common.Pdf
 
         #endregion
 
-        #region Utils
+        #region Utilities
 
         /// <summary>
         /// Compose the invoice
@@ -187,7 +187,7 @@ namespace Nop.Services.Common.Pdf
 
                     static IContainer CellStyle(IContainer container)
                     {
-                        return container.BorderBottom(1).BorderColor(Colors.Grey.Lighten2).PaddingVertical(5);
+                        return container.BorderBottom(1).BorderColor(Colors.Grey.Lighten2).PaddingVertical(5).ShowEntire();
                     }
                 }
             });
